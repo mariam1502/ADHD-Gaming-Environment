@@ -21,8 +21,10 @@ public class DragAndDrop : MonoBehaviour
             {
                 if(!hit.transform.GetComponent<pieceScripe>().InRightPosition)
                 {
+
                     SelectedPiece = hit.transform.gameObject;
                     SelectedPiece.GetComponent<pieceScripe>().Selected = true;
+
                 }
 
 

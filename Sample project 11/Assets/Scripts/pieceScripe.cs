@@ -15,14 +15,16 @@ public class pieceScripe : MonoBehaviour
 
     void Update()
     {
+   
+        print(Vector3.Distance(transform.position, RightPosition));
      if(Vector3.Distance(transform.position,RightPosition)<0.5f)
         {
-            if(!Selected)
+            if (!Selected)
             {
                 transform.position = RightPosition;
                 InRightPosition = true;
             }
-          
+
         }
     }
 }
