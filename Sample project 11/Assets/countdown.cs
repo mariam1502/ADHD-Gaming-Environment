@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.UI;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class countdown : MonoBehaviour
 {
     public float timeStart = 0;
-    public TextMesh textBox;
+    public TextMeshProUGUI textBox;
+    public string timepass;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,9 @@ public class countdown : MonoBehaviour
 
         {
             timeStart += Time.deltaTime;
+           
             textBox.text = Mathf.Round(timeStart).ToString();
+            timepass=Mathf.Round(timeStart).ToString();
         }
     }
 }

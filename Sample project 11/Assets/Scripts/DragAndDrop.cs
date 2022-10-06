@@ -5,6 +5,7 @@ using UnityEngine;
 public class DragAndDrop : MonoBehaviour
 {
     public GameObject SelectedPiece;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +25,11 @@ public class DragAndDrop : MonoBehaviour
 
                     SelectedPiece = hit.transform.gameObject;
                     SelectedPiece.GetComponent<pieceScripe>().Selected = true;
+  
+
 
                 }
+
 
 
             }
