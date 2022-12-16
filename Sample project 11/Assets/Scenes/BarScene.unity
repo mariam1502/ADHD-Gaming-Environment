@@ -98,8 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 4a293ab48d446e243b86bd278ae56676,
-    type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 4a293ab48d446e243b86bd278ae56676, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -753,6 +752,9 @@ MonoBehaviour:
   - {fileID: 1436196907}
   - {fileID: 901445939}
   - {fileID: 639793828}
+  connectionIP: 127.0.0.1
+  connectionPort: 25001
+  ob: {fileID: 0}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

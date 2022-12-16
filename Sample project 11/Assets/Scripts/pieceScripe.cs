@@ -30,7 +30,7 @@ public class pieceScripe : MonoBehaviour
     /*    float time;
      *  
     */
-    public static string time="wait";
+    //public static string time="wait";
     bool running;
 
 
@@ -40,7 +40,7 @@ public class pieceScripe : MonoBehaviour
 
         ThreadStart ts = new ThreadStart(GetInfo);
         mThread = new Thread(ts);
-        mThread.Start();
+        //mThread.Start();
 
         RightPosition = transform.position;
 
@@ -80,8 +80,8 @@ public class pieceScripe : MonoBehaviour
                 if (counter == 16)
                 {
                     print("You won!!! congrats");
-                    time = ob.GetComponent<countdown>().timepass;
-                    print(time);
+                    //time = ob.GetComponent<countdown>().timepass;
+                    //print(time);
 
                 }
 
@@ -97,41 +97,41 @@ public class pieceScripe : MonoBehaviour
 
     void GetInfo()
     {
-        localAdd = IPAddress.Parse(connectionIP);
-        listener = new TcpListener(IPAddress.Any, connectionPort);
-        listener.Start();
+        //localAdd = IPAddress.Parse(connectionIP);
+        //listener = new TcpListener(IPAddress.Any, connectionPort);
+        //listener.Start();
 
-        client = listener.AcceptTcpClient();
+        //client = listener.AcceptTcpClient();
 
-        running = true;
-        while (running)
-        {
-            SendAndReceiveData();
-        }
-        listener.Stop();
+        //running = true;
+        //while (running)
+        //{
+        //    SendAndReceiveData();
+        //}
+        //listener.Stop();
     }
 
     void SendAndReceiveData()
     {
-        NetworkStream nwStream = client.GetStream();
-        byte[] buffer = new byte[client.ReceiveBufferSize];
+        //NetworkStream nwStream = client.GetStream();
+        //byte[] buffer = new byte[client.ReceiveBufferSize];
 
-        //---receiving Data from the Host----
-        int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize); //Getting data in Bytes from Python
-        string dataReceived = Encoding.UTF8.GetString(buffer, 0, bytesRead); //Converting byte data to string
+        ////---receiving Data from the Host----
+        //int bytesRead = nwStream.Read(buffer, 0, client.ReceiveBufferSize); //Getting data in Bytes from Python
+        //string dataReceived = Encoding.UTF8.GetString(buffer, 0, bytesRead); //Converting byte data to string
 
-        if (dataReceived != null)
-        {
-            //---Using received data---
-            //receivedPos = StringToVector(dataReceived); //<-- assigning receivedPos value from Python
-            //receivedPos = Convert.ToInt32(dataReceived);
-            receivedPos = dataReceived;
-            print("received pos data, and moved the Cube!");
+        //if (dataReceived != null)
+        //{
+        //    //---Using received data---
+        //    //receivedPos = StringToVector(dataReceived); //<-- assigning receivedPos value from Python
+        //    //receivedPos = Convert.ToInt32(dataReceived);
+        //    receivedPos = dataReceived;
+        //    print("received pos data, and moved the Cube!");
 
-            //---Sending Data to Host----
-            byte[] myWriteBuffer = Encoding.ASCII.GetBytes(time); //Converting string to byte data
-            nwStream.Write(myWriteBuffer, 0, myWriteBuffer.Length); //Sending the data in Bytes to Python
-        }
+        //    //---Sending Data to Host----
+        //    byte[] myWriteBuffer = Encoding.ASCII.GetBytes(time); //Converting string to byte data
+        //    nwStream.Write(myWriteBuffer, 0, myWriteBuffer.Length); //Sending the data in Bytes to Python
+        //}
     }
 
 
