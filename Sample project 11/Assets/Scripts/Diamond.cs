@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Diamond : MonoBehaviour
 {
+    public GameObject confetti;
    private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Collision");
@@ -11,6 +12,8 @@ public class Diamond : MonoBehaviour
         if(player != null)
         {
             player.DiamondCollected();
+            confetti.SetActive(true);
+            confetti.transform.position = gameObject.transform.position;
             gameObject.SetActive(false);
         }
     }
