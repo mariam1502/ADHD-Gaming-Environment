@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/dashboard', function () {
-    return view('welcome');
+    return view('dashboard');
 })->name('dashboard');
 
 Route::get('/profile', function () {
