@@ -58,7 +58,7 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="{{ url('/dashboard') }}">Home</a></li>
                                     <li class="breadcrumb-item active" aria-current="page">@yield('page title')</li>
                                 </ol>
                             </nav>
@@ -80,8 +80,8 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-           
-            </footer>
+            @include('layouts.footer')
+
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
@@ -94,7 +94,7 @@
     <!-- End Wrapper -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
-  @include('layouts.footer-scripts')
+    @include('layouts.footer-scripts')
 </body>
 
 </html>
