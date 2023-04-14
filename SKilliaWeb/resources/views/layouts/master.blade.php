@@ -54,12 +54,12 @@
             <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-md-6 col-8 align-self-center">
-                        <h3 class="page-title mb-0 p-0">Dashboard</h3>
+                        <h3 class="page-title mb-0 p-0">@yield('page title')</h3>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                                    <li class="breadcrumb-item active" aria-current="page">@yield('page title')</li>
                                 </ol>
                             </nav>
                         </div>
@@ -73,96 +73,7 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Sales chart -->
-                <!-- ============================================================== -->
-                <!-- <div class="row">
-                    Column
-                    
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="card">
-                            
-                            <div>
-                                <hr class="mt-0 mb-0">
-                            </div>
-                            <div class="card-body text-center ">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- ============================================================== -->
-                <!-- Sales chart -->
-                <!-- ============================================================== -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-4 col-xlg-3">
-                        <!-- Column -->
-                        
-                        <!-- Column -->
-                        <div class="card">
-                            <div class="card-body bg-info">
-                                <h4 class="text-white card-title">My Patients</h4>
-                                <h6 class="card-subtitle text-white mb-0 op-5">Checkout my patients here</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="message-box contact-box">
-                                    <h2 class="add-ct-btn"><button type="button"
-                                            class="btn btn-circle btn-lg btn-success waves-effect waves-dark">+</button>
-                                    </h2>
-                                    <div class="message-widget contact-widget">
-                                        <!-- Message -->
-                                        <a href="#" class="d-flex align-items-center">
-                                            <div class="user-img mb-0"> <img src="../assets/images/users/1.png"
-                                                    alt="user" class="img-circle"> <span
-                                                    class="profile-status online pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5 class="mb-0">Layla Ahmed</h5> <span
-                                                class="mail-desc">10 years old</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="#" class="d-flex align-items-center">
-                                            <div class="user-img mb-0"> <img src="../assets/images/users/2.jpeg"
-                                                    alt="user" class="img-circle"> <span
-                                                    class="profile-status busy pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5 class="mb-0">Gana Mohammed</h5> <span
-                                                    class="mail-desc">8 years old</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="#" class="d-flex align-items-center">
-                                            <div class="user-img mb-0"> <img src="../assets/images/users/3.png"
-                                                alt="user" class="img-circle"> <span
-                                                class="profile-status offline pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5 class="mb-0">Ahmed Adel</h5> <span
-                                                    class="mail-desc">12 years old</span>
-                                            </div>
-                                        </a>
-                                        <!-- Message -->
-                                        <a href="#" class="d-flex align-items-center">
-                                            <div class="user-img mb-0"> <img src="../assets/images/users/4.jpeg"
-                                                    alt="user" class="img-circle"> <span
-                                                    class="profile-status offline pull-right"></span> </div>
-                                            <div class="mail-contnet">
-                                                <h5 class="mb-0">Hany Ahmed</h5> <span
-                                                    class="mail-desc">9 years old</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                <!-- ============================================================== -->
-                <!-- Table -->
-                <!-- ============================================================== -->
-
-                
-            </div>
+            @yield('content')
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->

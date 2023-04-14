@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('welcome');
-});
+})->name('dashboard');
+
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
+
+Route::get('/patients', function () {
+    return view('patients');
+})->name('patients');
+
+Route::get('/games', function () {
+    return view('games');
+})->name('games');
