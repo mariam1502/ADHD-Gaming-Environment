@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,6 +34,11 @@ return [
     */
 
     'connections' => [
+        'mongodb' => [
+            'driver'   => 'mongodb',
+            'dsn' => env('DB_URI',"mongodb+srv://mariamismail152001:D4CBfuOFa5OnMxHb@cluster0.pr8kbyx.mongodb.net/?retryWrites=true&w=majority"),
+            'database' => 'ADHD_GAMES',
+            ],
 
         'sqlite' => [
             'driver' => 'sqlite',
