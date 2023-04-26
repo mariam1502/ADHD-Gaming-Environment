@@ -90,7 +90,7 @@
                             <div class="col-sm-12 d-flex">
                                 {{-- <button class="btn btn-success mx-auto mx-md-0 text-white">Update
                                     Profile</button> --}}
-                                    <input type="submit" name="submit" value="Store Profile">
+                                    <input class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="submit" value="Store Profile">
 
                             </div>
                         </div>
