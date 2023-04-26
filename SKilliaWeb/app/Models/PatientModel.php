@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 // use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 
-class AddPatientModel extends Eloquent
+class PatientModel extends Eloquent
 {
 
     protected $connection="mongodb";

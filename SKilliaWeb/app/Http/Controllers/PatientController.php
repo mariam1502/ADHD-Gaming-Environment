@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\Models\PatientModel;
+
+
+use Illuminate\Http\Request;
+
+class PatientController extends Controller
+{
+    public function index()
+    {
+        return view('add_patient');
+
+    }
+
+    public function store(Request $request)
+    {
+        PatientModel::create($request->all());
+        return view('dashboard');
+
+    }
+
+    public function destroy(Request $request)
+ {
+
+        $patientId=$request->get('patient_id');
+        $patient = PatientModel::find($patientId);
+        $patient->delete();
+        return view('patients');    
+ }
+}

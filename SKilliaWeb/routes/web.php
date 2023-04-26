@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TherapistController;
-use App\Http\Controllers\AddPatientController;
+use App\Http\Controllers\PatientController;
 
 
 /*
@@ -45,8 +45,9 @@ Route::post('/store', [TherapistController::class, 'store']);
 Route::delete('/your-url/delete/{id}', [TherapistController::class, 'delete'])->name('your_delete_route_name');
 Auth::routes();
 
-Route::get('/add_patient', [AddPatientController::class, 'index']);
-Route::post('/adding_patient', [AddPatientController::class, 'store']);
+Route::get('/add_patient', [PatientController::class, 'index']);
+Route::post('/adding_patient', [PatientController::class, 'store']);
+Route::post('/deleting_patient', [PatientController::class, 'destroy']);
 
 
 

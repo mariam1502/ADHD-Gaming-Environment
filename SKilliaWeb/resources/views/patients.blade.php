@@ -29,59 +29,52 @@
                     <h4 class="card-title">Patients Table</h4>
                     <h6 class="card-subtitle">Add class <code>.table</code></h6>
                     <div class="table-responsive">
+
+
                         <table class="table user-table">
                             <thead>
                                 <tr>
                                     <th class="border-top-0">#</th>
                                     <th class="border-top-0">First Name</th>
-                                    <th class="border-top-0">Last Name</th>
                                     <th class="border-top-0">Age</th>
-                                    <th class="border-top-0">Start Date</th>
+                                    <th class="border-top-0">Gendre</th>
+                                    <th class="border-top-0">Phone</th>
+                                    <th class="border-top-0">Actions</th>
+
+
                                 </tr>
                             </thead>
                             <tbody>
+
                                 <tr>
                                     <td>1</td>
                                     <td>Ahmed</td>
-                                    <td>Adel</td>
+                                    <td>Male</td>
                                     <td>12</td>
-                                    <td>25/3/2023</td>
+                                    <td>01016633884</td>
+                                    <td>
+                                        <?php           
+                                        if(isset($_POST['delete']))
+                                        {
+                                           $id= $_POST['patient_id'];
+                                        }
+                                        ?>
+                                        <form action="/deleting_patient"  method="POST" >
+                                            @csrf
+                                        <input class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="update" value="Update">
+                                        <input class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="delete" value="Delete" style="background-color: red;  border: none;">
+                                        <input type="hidden" name="patient_id" value="644927fe11c04242320c6b26">
+                                        <?php
+
+                                        ?>
+                                
+                                    </form>
+
+
+
+                                    </td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Layla</td>
-                                    <td>Ahmed</td>
-                                    <td>10</td>
-                                    <td>29/5/2023</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Gana</td>
-                                    <td>Mohammed</td>
-                                    <td>8</td>
-                                    <td>19/3/2023</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Mark</td>
-                                    <td>Emad</td>
-                                    <td>12</td>
-                                    <td>9/7/2023</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Lamya</td>
-                                    <td>Ahmed</td>
-                                    <td>7</td>
-                                    <td>5/1/2023</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Hany</td>
-                                    <td>Ahmed</td>
-                                    <td>9</td>
-                                    <td>3/10/2023</td>
-                                </tr>
+
                             </tbody>
                         </table>
                     </div>
