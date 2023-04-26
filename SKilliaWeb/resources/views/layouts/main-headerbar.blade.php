@@ -9,7 +9,7 @@
                 <a class="logo-icon">
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     <!-- Dark Logo icon -->
-                    <img src="../assets/images/Skillia.png" alt="homepage" class="dark-logo" width="50" />
+                    <img src="../assets/images/Untitled-1.png" alt="homepage" class="dark-logo" width="100%" />
 
                 </a>
                 <!--End Logo icon -->

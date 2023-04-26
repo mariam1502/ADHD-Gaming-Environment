@@ -53,23 +53,16 @@
                                     <td>12</td>
                                     <td>01016633884</td>
                                     <td>
-                                        <?php           
-                                        if(isset($_POST['delete']))
-                                        {
-                                           $id= $_POST['patient_id'];
-                                        }
-                                        ?>
-                                        <form action="/deleting_patient"  method="POST" >
+                                       <form action="/deleting_patient"  method="POST" style="float: left;  padding: 5px;'">
                                             @csrf
-                                        <input class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="update" value="Update">
                                         <input class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="delete" value="Delete" style="background-color: red;  border: none;">
-                                        <input type="hidden" name="patient_id" value="644927fe11c04242320c6b26">
-                                        <?php
-
-                                        ?>
-                                
                                     </form>
+                                    <form action="#" method="POST" style="float: left;  padding: 5px;'">
+                                        @csrf
+                                        <input type="hidden" name="patient_id" value="644927fe11c04242320c6b26">
+                                        <input class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="update" value="Update">
 
+                                    </form>
 
 
                                     </td>
