@@ -35,7 +35,7 @@
                             <thead>
                                 <tr>
                                     <th class="border-top-0">#</th>
-                                    <th class="border-top-0">First Name</th>
+                                    <th class="border-top-0">Name</th>
                                     <th class="border-top-0">Age</th>
                                     <th class="border-top-0">Gendre</th>
                                     <th class="border-top-0">Phone</th>
@@ -45,15 +45,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-
+                                @forelse ($patients as $patient)
                                 <tr>
-                                    <td>1</td>
-                                    <td>Ahmed</td>
-                                    <td>Male</td>
-                                    <td>12</td>
-                                    <td>01016633884</td>
+                                    <td>{{$patient->id}}</td>
+                                    <td>{{$patient->name}}</td>
+                                    <td>{{$patient->birth}}</td>
+                                    <td>{{$patient->gender}}</td>
+                                    <td>{{$patient->phone}}</td>
+                                    
                                     <td>
-                                       <form action="/deleting_patient"  method="POST" style="float: left;  padding: 5px;'">
+                                        <form action="/deleting_patient"  method="POST" style="float: left;  padding: 5px;'">
                                             @csrf
                                         <input class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="delete" value="Delete" style="background-color: red;  border: none;">
                                     </form>
@@ -66,7 +67,15 @@
 
 
                                     </td>
-                                </tr>
+                                </tr> 
+                                @empty
+                                    <tr>
+                                        <td colspan="6">No Patients Found</td>
+
+                                    </tr>    
+                                @endforelse
+
+
 
                             </tbody>
                         </table>

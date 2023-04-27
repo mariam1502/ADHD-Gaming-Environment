@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TherapistController;
 use App\Http\Controllers\PatientController;
@@ -16,21 +17,21 @@ use App\Http\Controllers\PatientController;
 |
 */
 
- Route::get('/dashboard', function () {
-     return view('dashboard');
- })->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
 
- Route::get('/profile', function () {
-     return view('profile');
- })->name('profile');
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
 
- Route::get('/patients', function () {
-     return view('patients');
- })->name('patients');
+Route::get('/patients', function () {
+    return view('patients');
+})->name('patients');
 
- Route::get('/games', function () {
-     return view('games');
- })->name('games');
+Route::get('/games', function () {
+    return view('games');
+})->name('games');
 
 //  Route::resource('therapist',TherapistController::class)->only([
 //     'destory','show','store','update'
@@ -49,6 +50,6 @@ Route::get('/add_patient', [PatientController::class, 'index']);
 Route::post('/adding_patient', [PatientController::class, 'store']);
 Route::post('/deleting_patient', [PatientController::class, 'destroy']);
 
-
+Route::get('/patients', [PatientController::class, 'view'])->name('patients');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

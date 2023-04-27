@@ -14,6 +14,20 @@ class PatientController extends Controller
 
     }
 
+    // public function view()
+    // {
+    //     $patients=auth()->user()->patients;  //get the patient of this therapist
+    //     return view('patients' , compact('patients'));
+
+    // }
+
+    public function view()
+    {
+        $patients = PatientModel::all();
+        return view('patients', compact('patients'));
+    }
+
+
     public function store(Request $request)
     {
         PatientModel::create($request->all());
@@ -21,12 +35,11 @@ class PatientController extends Controller
 
     }
 
-    public function destroy(Request $request)
- {
+    public function destroy(Request $request){
 
         $patientId=$request->get('patient_id');
         $patient = PatientModel::find($patientId);
         $patient->delete();
         return view('patients');    
- }
+    }
 }

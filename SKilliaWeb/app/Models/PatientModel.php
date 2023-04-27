@@ -13,7 +13,7 @@ class PatientModel extends Eloquent
     protected $connection="mongodb";
     protected $collection = 'Patients';
 
-    protected $fillable = ['name', 'birth' ,'gendre', 'email' ,'phone' ,'symptoms' ,'diagnostic_information' ,'history','impacting_daily' ,'support_system' ,'school_performance' ,'home_environment' ,'social_skills','medication' ,'daily_routines','emotional_behavioral_regulation','self_esteem','goals','extra'];
+    protected $fillable = ['name', 'birth' ,'gender', 'email' ,'phone' ,'symptoms' ,'diagnostic_information' ,'history','impacting_daily' ,'support_system' ,'school_performance' ,'home_environment' ,'social_skills','medication' ,'daily_routines','emotional_behavioral_regulation','self_esteem','goals','extra'];
 
 
 }
