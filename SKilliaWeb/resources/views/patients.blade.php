@@ -39,7 +39,9 @@
                                     <th class="border-top-0">Age</th>
                                     <th class="border-top-0">Gendre</th>
                                     <th class="border-top-0">Phone</th>
-                                    <th class="border-top-0">Actions</th>
+                                    <th class="border-top-0">Delete</th>
+                                    <th class="border-top-0">Edit</th>
+
 
 
                                 </tr>
@@ -54,19 +56,16 @@
                                     <td>{{$patient->phone}}</td>
                                     
                                     <td>
-                                        <form action="/deleting_patient"  method="POST" style="float: left;  padding: 5px;'">
-                                            @csrf
-                                        <input class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="delete" value="Delete" style="background-color: red;  border: none;">
-                                    </form>
-                                    <form action="#" method="POST" style="float: left;  padding: 5px;'">
+                                    <form action="/deleting_patient" method="POST" style="float: left; padding: 5px;">
                                         @csrf
-                                        <input type="hidden" name="patient_id" value="644927fe11c04242320c6b26">
-                                        <input class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="update" value="Update">
-
+                                        <input class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="delete" value="Delete" style="background-color: red; border: none;">
                                     </form>
-
+                                    </td>
+                                    <td>  
+                                        <a href="{{route('patients.edit' , $patient->id)}}" class="btn btn-success mx-auto mx-md-0 text-white" type="submit" name="update" style="float: left; margin-left: 5px; padding: 5px; width: 70px; text-align: center;">Edit</a>
 
                                     </td>
+                        
                                 </tr> 
                                 @empty
                                     <tr>

@@ -49,6 +49,11 @@ Auth::routes();
 Route::get('/add_patient', [PatientController::class, 'index']);
 Route::post('/adding_patient', [PatientController::class, 'store']);
 Route::post('/deleting_patient', [PatientController::class, 'destroy']);
+// Route::get('/editPatients/{id}', [PatientController::class, 'edit'])->name('editPatients');
+// Route::get('/editPatients/{id}', [PatientController::class, 'update'])->name('updatePatients');
+
+
+Route::resource('patients' , PatientController::class);
 
 Route::get('/patients', [PatientController::class, 'view'])->name('patients');
 Route::get('/dashboard', [PatientController::class, 'dashboardview'])->name('dashboard');
