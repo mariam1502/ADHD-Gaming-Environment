@@ -27,6 +27,11 @@ class PatientController extends Controller
         return view('patients', compact('patients'));
     }
 
+    public function dashboardview()
+    {
+        $patients = PatientModel::all();
+        return view('dashboard', compact('patients'));
+    }
 
     public function store(Request $request)
     {

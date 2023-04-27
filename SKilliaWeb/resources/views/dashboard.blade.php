@@ -16,74 +16,37 @@
     Dashboard 
 @endsection
 
-@section('content')
-<div class="container-fluid">
+@section('content')<div class="container-fluid">
     <div class="row">
-        <!-- Column -->
         <div class="col-lg-4 col-xlg-3">
-            <!-- Column -->
-            
-            <!-- Column -->
             <div class="card">
                 <div class="card-body bg-info">
                     <h4 class="text-white card-title">My Patients</h4>
                     <h6 class="card-subtitle text-white mb-0 op-5">Checkout my patients here</h6>
                 </div>
                 <div class="card-body">
-                    <div class="message-box contact-box">
+                    <div class="contact-box message-box">
                         <h2 class="add-ct-btn">
-                        <button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark"><a href="/add_patient" style="text-decoration: none;color:aliceblue">+</a></button>
+                            <button type="button" class="btn btn-circle btn-lg btn-success waves-effect waves-dark">
+                                <a href="/add_patient" style="text-decoration: none; color: aliceblue;">+</a>
+                            </button>
                         </h2>
-                        <div class="message-widget contact-widget">
-                            <!-- Message -->
-                            <a href="#" class="d-flex align-items-center">
-                                <div class="user-img mb-0"> <img src="../assets/images/users/1.png"
-                                        alt="user" class="img-circle"> <span
-                                        class="profile-status online pull-right"></span> </div>
+                        <div class="contact-widget message-widget">
+                            @forelse ($patients as $patient)
                                 <div class="mail-contnet">
-                                    <h5 class="mb-0">Layla Ahmed</h5> <span
-                                    class="mail-desc">10 years old</span>
+                                    <h5 class="mb-0">{{ $patient->name }}</h5>
+                                    <span class="mail-desc">{{ $patient->birth }}</span>
                                 </div>
-                            </a>
-                            <!-- Message -->
-                            <a href="#" class="d-flex align-items-center">
-                                <div class="user-img mb-0"> <img src="../assets/images/users/2.jpeg"
-                                        alt="user" class="img-circle"> <span
-                                        class="profile-status busy pull-right"></span> </div>
-                                <div class="mail-contnet">
-                                    <h5 class="mb-0">Gana Mohammed</h5> <span
-                                        class="mail-desc">8 years old</span>
-                                </div>
-                            </a>
-                            <!-- Message -->
-                            <a href="#" class="d-flex align-items-center">
-                                <div class="user-img mb-0"> <img src="../assets/images/users/3.png"
-                                    alt="user" class="img-circle"> <span
-                                    class="profile-status offline pull-right"></span> </div>
-                                <div class="mail-contnet">
-                                    <h5 class="mb-0">Ahmed Adel</h5> <span
-                                        class="mail-desc">12 years old</span>
-                                </div>
-                            </a>
-                            <!-- Message -->
-                            <a href="#" class="d-flex align-items-center">
-                                <div class="user-img mb-0"> <img src="../assets/images/users/4.jpeg"
-                                        alt="user" class="img-circle"> <span
-                                        class="profile-status offline pull-right"></span> </div>
-                                <div class="mail-contnet">
-                                    <h5 class="mb-0">Hany Ahmed</h5> <span
-                                        class="mail-desc">9 years old</span>
-                                </div>
-                            </a>
+                                <br> <!-- Add a line break between each patient -->
+                            @empty
+                                <p>No patients found.</p>
+                            @endforelse
                         </div>
                     </div>
-                </div>
-                
-    <!-- ============================================================== -->
-    <!-- Table -->
-    <!-- ============================================================== -->
-
-    
+                </div> 
+            </div>
+        </div>
+    </div>          
 </div>
 
 @endsection

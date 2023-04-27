@@ -51,5 +51,6 @@ Route::post('/adding_patient', [PatientController::class, 'store']);
 Route::post('/deleting_patient', [PatientController::class, 'destroy']);
 
 Route::get('/patients', [PatientController::class, 'view'])->name('patients');
+Route::get('/dashboard', [PatientController::class, 'dashboardview'])->name('dashboard');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
